@@ -6,8 +6,7 @@
 #### 利用FastApi搭配uvicorn自带的异步的方式进行数据的推理，比Flask+gunicorn更加方便和快一些
  
 #####  启动服务 uvicorn Text-CNN-server:app --reload ，开启热启动模式
-#####  启动服务 uvicorn Text-CNN-server:app --port=5000 --workers=4，开启生产模式
-
+#####  启动服务 uvicorn Text-CNN-server:app --port=5000 --workers=4，开启生产模式， 注意: Sanic(FastAPI) 的性能的确很棒，当时技术验证时，测试的时候，不同业务逻辑下，基本都能保证其性能在 Flask 的 1.5 倍以上。但是就目前的使用经验来说 Sanic（(FastAPI)）距离真正生产可用，还有相当长一段路要走。无论是内部的架构，还是周边的生态，亦或者是其他。大家可以没事拿来玩玩，但是如果要上生产线，请做好被坑的准备
 
 > backend 
 
